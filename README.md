@@ -279,14 +279,12 @@ To train the project for another person:
 - A lower LBPH confidence value means a better match.
 - Click the camera window before pressing **Esc**.
 
----
 
-## Track
-
-This project was developed as part of the **Artificial Intelligence and Robotics Track**.
 
 ---
 
 ## Author
 
 **Faris Bahussain**
+
+Artificial Intelligence and Robotics Track
