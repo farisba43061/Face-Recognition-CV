@@ -106,16 +106,6 @@ trainer/trainer.yml
 - Recognizes trained faces.
 - Displays the person's name and recognition score.
 
-Before running the program, replace:
-
-```python
-names = {
-    1: "Enter Your Name Here"
-}
-```
-
-with your own name.
-
 ---
 
 ### `dataset/`
@@ -154,7 +144,7 @@ python -m pip install opencv-python opencv-contrib-python numpy pillow
 
 ### Step 3: Create the Required Folders
 
-Create these folders inside the project directory if they do not already exist:
+Inside the project folder, manually create the following folders if they do not already exist:
 
 ```text
 Face Recognition/
@@ -163,48 +153,26 @@ Face Recognition/
 └── trainer/
 ```
 
-- **dataset/** stores the captured face images.
-- **trainer/** stores the trained recognition model.
+These folders are required for the project to work correctly.
+
+- **dataset/** stores all captured face images.
+- **trainer/** stores the trained face recognition model (`trainer.yml`).
 
 ---
 
 ### Step 4: Download the Haar Cascade File
 
-Download:
+Download the following file from the official OpenCV GitHub repository:
 
 ```text
 haarcascade_frontalface_default.xml
 ```
 
-Place it inside the project folder with the Python files.
+Place the XML file in the main project folder alongside the Python files.
 
 ---
 
-### Step 5: Enter Your Name
-
-Open **face_recognition.py**.
-
-Replace:
-
-```python
-names = {
-    1: "Enter Your Name Here"
-}
-```
-
-with your own name.
-
-Example:
-
-```python
-names = {
-    1: "John"
-}
-```
-
----
-
-### Step 6: Capture Your Face Images
+### Step 5: Capture Your Face Images
 
 Run:
 
@@ -212,22 +180,13 @@ Run:
 python capture_faces.py
 ```
 
-Look directly at the webcam and slowly move your head:
+Look directly at the webcam and slowly move your head in different directions until approximately **100 face images** have been captured.
 
-- Left
-- Right
-- Up
-- Down
-- Slightly closer
-- Slightly farther away
-
-The program automatically stops after capturing approximately **100 face images**.
-
-You can also press **Esc** to stop.
+You can also press **Esc** to stop the program early.
 
 ---
 
-### Step 7: Train the Recognition Model
+### Step 6: Train the Recognition Model
 
 Run:
 
@@ -235,7 +194,7 @@ Run:
 python train_model.py
 ```
 
-This creates:
+This will create the trained model file:
 
 ```text
 trainer/trainer.yml
@@ -243,7 +202,7 @@ trainer/trainer.yml
 
 ---
 
-### Step 8: Start Face Recognition
+### Step 7: Start Face Recognition
 
 Run:
 
@@ -251,9 +210,9 @@ Run:
 python face_recognition.py
 ```
 
-The webcam will open and recognize the trained face.
+The webcam will open and recognize the trained face in real time.
 
-Press **Esc** to close the application.
+Press **Esc** to close the program.
 
 ---
 
@@ -263,10 +222,9 @@ To train the project for another person:
 
 1. Delete every image inside the **dataset** folder.
 2. Delete **trainer/trainer.yml**.
-3. Change the name inside `face_recognition.py`.
-4. Run `capture_faces.py`.
-5. Run `train_model.py`.
-6. Run `face_recognition.py`.
+3. Run `capture_faces.py`.
+4. Run `train_model.py`.
+5. Run `face_recognition.py`.
 
 ---
 
@@ -276,9 +234,8 @@ To train the project for another person:
 - Keep your face fully visible.
 - Capture images from multiple angles.
 - Do not move too quickly while capturing images.
-- A lower LBPH confidence value means a better match.
+- A lower LBPH confidence value indicates a better match.
 - Click the camera window before pressing **Esc**.
-
 
 
 ---
